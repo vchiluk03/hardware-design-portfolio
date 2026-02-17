@@ -26,7 +26,7 @@ This project focuses on practical SoC-integration concepts:
 
 ```text
 SoC-Integration-RISCV-SystemC-FIR-Accelerator/
-├── ece720_project2_vchiluk3_report.pdf
+├── project_report.pdf
 ├── sc/           # SystemC/TLM subsystem modeling
 ├── rocket_sim/   # RISC-V software/simulation flow
 ├── hls/          # High-level synthesis flow artifacts
@@ -77,7 +77,7 @@ Use `make clean` within each subdirectory as needed.
 
 Project report:
 
-- `ece720_project2_vchiluk3_report.pdf`
+- `project_report.pdf`
 
 ## Skills Demonstrated
 
