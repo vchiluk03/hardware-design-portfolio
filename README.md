@@ -20,6 +20,7 @@ This repository presents project documentation, architecture artifacts, validati
 | **I²C Multi-Bus Master Verification** | ASIC Verification | Wishbone↔I²C bridge verification with layered testbench, assertions, regression, and coverage closure | [I2CMB-Controller-Verification](./I2CMB-Controller-Verification) |
 | **LC-3 Decode Unit UVM Verification** | UVM / CPU Verification | Predictor + scoreboard architecture for decode correctness and control-signal validation | [LC3-CPU-Decode-UVM](./LC3-CPU-Decode-UVM/decode_unit_uvm) |
 | **Interrupt Controller Design & Verification** | RTL Design + DV | Parameterized interrupt arbitration with APB-style configurability and task-based verification | [Interrupt-Controller-Design-Verification](./Interrupt-Controller-Design-Verification) |
+| **RISC-V SystemC FIR Accelerator** | SoC Modeling + HLS | SystemC/TLM integration of CPU, DMA, memory, and FIR accelerator with HLS and Verilog simulation flow | [SoC-Integration-RISCV-SystemC-FIR-Accelerator](./SoC-Integration-RISCV-SystemC-FIR-Accelerator) |
 | **Microarchitecture Simulations** | Computer Architecture | C++ simulators for cache hierarchy, branch prediction, and out-of-order superscalar behavior | [Microarchitecture-Simulations](./Microarchitecture-Simulations) |
 | **Transformer Attention Accelerator** | ASIC RTL + Synthesis | FSM-controlled scaled dot-product attention datapath with SRAM-based architecture and synthesis analysis | [Transformer-Attention-Accelerator](./Transformer-Attention-Accelerator) |
 
