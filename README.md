@@ -10,9 +10,11 @@ To comply with academic integrity and responsible sharing practices, source code
 
 If code review is needed for recruiting/interviews, submit a request here:
 
-https://github.com/<your-username>/<public-repo>/issues/new?title=Code%20Access%20Request
+https://github.com/<your-username>/hardware-design-portfolio/issues/new?template=code_access_request.yml&title=Code%20Access%20Request
 
 I review requests and share code in a **read-only format** (for example, PDF snapshot or time-limited archive). I do not grant direct collaborator access to the private repository.
+
+When a request issue is submitted, GitHub sends me an email notification to my account email.
 
 ## About This Portfolio
 

@@ -1,0 +1,53 @@
+name: Code Access Request
+description: Request read-only access to project source code for evaluation
+title: "Code Access Request: <your name>"
+labels:
+  - code-access-request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please complete this form. Access is reviewed case-by-case for recruiting/interview evaluation.
+  - type: input
+    id: full_name
+    attributes:
+      label: Full name
+      placeholder: Jane Doe
+    validations:
+      required: true
+  - type: input
+    id: organization
+    attributes:
+      label: Company / University
+      placeholder: Example Corp
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Role / Team
+      placeholder: Hardware Verification Engineer
+    validations:
+      required: true
+  - type: input
+    id: contact_email
+    attributes:
+      label: Contact email
+      placeholder: jane.doe@example.com
+      description: Email where you want the response sent.
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Request purpose
+      placeholder: Briefly describe why you need code access and what projects you want to review.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I understand source code is shared at the owner's discretion and may be read-only or time-limited.
+          required: true
