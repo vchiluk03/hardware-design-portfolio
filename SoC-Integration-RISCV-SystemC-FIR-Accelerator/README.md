@@ -1,113 +1,88 @@
-# RISC-V SystemC FIR Accelerator (TLM + HLS + Verilog Simulation)
+# RISC-V SystemC FIR Accelerator (SoC Integration)
 
-This project documents a SystemC/TLM-based SoC modeling flow where a **RISC-V software stack** interacts with a **DMA-connected FIR accelerator**, with optional **HLS** and **Verilog-level** simulation.
+This project presents a **SystemC/TLM SoC integration flow** where a RISC-V software stack drives a **DMA-connected FIR accelerator**, with continuity into **HLS** and **Verilog simulation**.
 
-Developed as an academic project, it demonstrates end-to-end understanding from software execution to transaction-level communication and hardware implementation flow.
+Built as an academic SoC modeling project, it demonstrates end-to-end understanding across software execution, interconnect transactions, hardware acceleration, and simulation handoff.
 
----
+## Objective
 
-## Project Objective
+Design and validate a small accelerator subsystem in which:
 
-Build and validate a small accelerator subsystem where:
+- RISC-V software runs through Spike/emulation flow,
+- DMA moves data between memory and the accelerator,
+- FIR computation executes on the accelerator path,
+- and behavior can be studied at both SystemC and RTL levels.
 
-- a RISC-V program runs through Spike-based simulation,
-- data movement is handled through a DMA path,
-- a FIR accelerator processes streamed input/coefficient data,
-- and the same flow can be evaluated at both SystemC and RTL simulation levels.
+## SoC Integration Scope
 
----
+This project focuses on practical SoC-integration concepts:
 
-## Why This Is SoC-Relevant
-
-Yes — this is an **SoC-level understanding project**.
-
-It covers core SoC concepts:
-
-- **HW/SW interaction:** software controls data movement and accelerator execution.
-- **Interconnect-level modeling:** transaction flow across SystemC/TLM buses and adapters.
-- **Subsystem integration:** CPU model, memory controller, DMA engine, and accelerator connected in one simulation platform.
-- **Implementation path:** behavioral model → HLS output → Verilog simulation handoff.
-
-This is not a full production SoC tapeout project, but it is strong SoC-integration and architecture-level experience.
-
----
+- **HW/SW interaction:** software-triggered data movement and accelerator execution.
+- **Interconnect-level modeling:** transaction flow through SystemC/TLM components.
+- **Subsystem composition:** CPU model, memory, DMA, and FIR accelerator in one platform.
+- **Implementation continuity:** behavioral model to HLS/Verilog simulation flow.
 
 ## Repository Structure
 
 ```text
-RISCV-SystemC-FIR-Accelerator/
-├── ece720_project2_vchiluk3_report.pdf   # Project report
-├── sc/                                   # SystemC model (CPU, DMA, memory, accelerator integration)
-├── rocket_sim/                           # RISC-V simulation flow (Spike / emulator integration)
-├── hls/                                  # High-level synthesis scripts and outputs
-├── vsim/                                 # Verilog simulation executable and setup
-├── setup.sh                              # Environment setup script
+SoC-Integration-RISCV-SystemC-FIR-Accelerator/
+├── ece720_project2_vchiluk3_report.pdf
+├── sc/           # SystemC/TLM subsystem modeling
+├── rocket_sim/   # RISC-V software/simulation flow
+├── hls/          # High-level synthesis flow artifacts
+├── vsim/         # Verilog simulation setup
+├── setup.sh
 └── README.md
 ```
 
----
+## Public Portfolio Notes
 
-## Code Availability
+This public project folder is a portfolio-facing version.
 
-This public project folder keeps documentation and report artifacts only.
+- Documentation/report artifacts are preserved for review.
+- Some implementation files are intentionally withheld from this public copy.
+- Code access requests are handled via the public repository request form:
 
-- `sc/`, `rocket_sim/`, `hls/`, and `vsim/` contain placeholders in the public version.
-- Original source code and scripts are maintained privately.
-- Code review access can be requested through the root repository process.
-
----
+https://github.com/vchiluk03/hardware-design-portfolio/issues/new?template=code_access_request.yml&title=Code%20Access%20Request
 
 ## Technical Highlights
 
-- **Modeling:** SystemC transaction-level modeling (TLM).
-- **ISA Simulation:** RISC-V Spike-based execution flow.
-- **Data Path:** DMA-mediated transfer between memory and accelerator path.
-- **Accelerator:** FIR compute pipeline with streamed input/coefficients and packed outputs.
-- **Flow Continuity:** support for both SystemC simulation and Verilog simulation using HLS results.
+- SystemC/TLM transaction modeling for SoC communication paths.
+- RISC-V execution flow integration with accelerator control.
+- DMA-based streaming data path to FIR compute block.
+- HLS/RTL simulation handoff awareness in one project flow.
 
----
-
-## Build and Run (Linux Environment)
+## Build Flow Reference (Linux)
 
 ```bash
-# From project root
+# Environment setup
 source setup.sh
 
-# Build SystemC side
-cd sc
-make
+# SystemC model
+cd sc && make
 
-# Build and run RISC-V simulation flow
-cd ../rocket_sim
-make
-make sim
+# RISC-V simulation
+cd ../rocket_sim && make && make sim
 
-# Optional: run HLS flow
-cd ../hls
-make
+# Optional HLS flow
+cd ../hls && make
 
-# Optional: run Verilog simulation flow
-cd ../vsim
-make
-# then switch simulator target in rocket_sim/Makefile as needed
+# Optional Verilog simulation
+cd ../vsim && make
 ```
 
-Use `make clean` in each subdirectory to remove generated files.
-
----
+Use `make clean` within each subdirectory as needed.
 
 ## Report
 
-Detailed methodology, architecture, and results are provided in:
+Project report:
 
 - `ece720_project2_vchiluk3_report.pdf`
 
----
-
 ## Skills Demonstrated
 
-- SoC subsystem integration and architecture thinking
-- SystemC/TLM modeling and simulation
-- RISC-V simulation workflow and performance-awareness
-- DMA + accelerator control/data-path understanding
-- HLS-to-RTL flow familiarity and simulation handoff
+- SoC subsystem integration and architecture-level reasoning
+- SystemC/TLM modeling and simulation workflow
+- RISC-V software/hardware co-simulation understanding
+- DMA and accelerator control/data-path integration
+- HLS-to-RTL flow awareness
