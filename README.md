@@ -2,19 +2,14 @@
 
 Portfolio of **ASIC Design, RTL Verification, and Computer Microarchitecture** projects by **Vishnuvardhan Chilukoti**.
 
-[![Domain](https://img.shields.io/badge/Domain-Digital%20Design%20%7C%20Verification-blue)](#)
-[![Focus](https://img.shields.io/badge/Focus-UVM%20%7C%20SystemVerilog%20%7C%20C%2B%2B-informational)](#)
-[![Status](https://img.shields.io/badge/Portfolio-Active-success)](#)
-
-This repository is a curated showcase of project documentation, architecture artifacts, validation results, and methodology notes from advanced hardware-focused work.
+This repository presents project documentation, architecture artifacts, validation results, and methodology notes from advanced hardware-focused work.
 
 ---
 
 ## Portfolio Snapshot
 
-- **Primary Focus:** Functional verification (UVM-style), RTL architecture, and performance-oriented microarchitecture simulation.
-- **Core Domains:** Bus protocols (Wishbone/I²C), decode/control logic verification, memory hierarchy, branch prediction, and out-of-order execution.
-- **Methodology:** Structured test planning, layered environments, coverage-driven closure, and reproducible simulation/synthesis flows.
+- **Main Focus:** RTL design, functional verification, and microarchitecture simulation.
+- **Project Areas:** SoC interconnect and peripheral verification, CPU pipeline/control verification, interrupt subsystem design, and core microarchitecture modeling.
 
 ---
 
@@ -32,11 +27,11 @@ This repository is a curated showcase of project documentation, architecture art
 
 ## Technical Competencies
 
-- **HDL & Verification:** SystemVerilog, Verilog, UVM-style environments, assertions, scoreboards, predictors, constrained-random and directed testing.
-- **Protocols & Interfaces:** I²C, Wishbone, APB-style register access, memory-mapped control paths.
-- **Architecture & Performance:** Cache hierarchy analysis, branch predictor design (Bimodal/Gshare/Hybrid), Tomasulo-style out-of-order modeling.
-- **Tooling:** Questa/ModelSim, Makefile-based automation, Synopsys Design Compiler, waveform/debug workflows.
-- **Programming:** C++ (microarchitecture simulators), Python (input/workflow scripting).
+- **HDL & Verification:** SystemVerilog, Verilog, UVM-style testbenches, assertions, scoreboards, constraints and directed/random testing.
+- **Protocols:** I²C, Wishbone, and AMBA protocols (APB/AHB/AXI).
+- **Architecture:** Cache simulation, branch prediction, and out-of-order pipeline modeling.
+- **Tools:** Questa/ModelSim, Makefile automation, and Synopsys Design Compiler.
+- **Programming:** C++ and Python.
 
 ---
 
@@ -47,7 +42,7 @@ To uphold academic integrity and responsible sharing practices:
 - **Included:** Documentation, reports, figures, waveform snapshots, setup notes, and non-sensitive artifacts.
 - **Restricted:** Original graded source files and selected scripts are not publicly exposed in raw form.
 
-This portfolio is intentionally structured for **technical review and discussion** while respecting coursework and sharing constraints.
+This portfolio is structured for professional technical review while respecting coursework and sharing constraints.
 
 ---
 
@@ -65,16 +60,6 @@ https://github.com/vchiluk03/hardware-design-portfolio/issues/new?template=code_
 3. Approved access is provided in a **read-only format** (for example: PDF snapshot or time-limited archive).
 
 > Direct collaborator access to private repositories is not granted.
-
----
-
-## Quick Navigation
-
-- [I2CMB Verification README](./I2CMB-Controller-Verification/README.md)
-- [LC-3 Decode UVM README](./LC3-CPU-Decode-UVM/decode_unit_uvm/README.md)
-- [Interrupt Controller README](./Interrupt-Controller-Design-Verification/README.md)
-- [Microarchitecture Simulations README](./Microarchitecture-Simulations/README.md)
-- [Attention Accelerator README](./Transformer-Attention-Accelerator/README.md)
 
 ---
 
